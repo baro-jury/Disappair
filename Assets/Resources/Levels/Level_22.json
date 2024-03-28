@@ -1,0 +1,28 @@
+{
+    "Level": 22,
+    "Difficulty": "Normal",
+    "Theme": 5,
+    "Time": [ 200.0, 0.0, 50.0, 100.0 ],
+    "Process": [
+        {
+            "MinID": 1,
+            "MaxID": 10,
+            "TotalTile": 36,
+            "Shuffle": true,
+            "Row": 6,
+            "Column": 6,
+            "Matrix": [
+                [ "?", "?", "?", "?", "?", "?" ],
+                [ "?", "?", "?", "?", "?", "?" ],
+                [ "?", "?", "?", "?", "?", "?" ],
+                [ "?", "?", "?", "?", "?", "?" ],
+                [ "?", "?", "?", "?", "?", "?" ],
+                [ "?", "?", "?", "?", "?", "?" ]
+            ],
+            "PullDown": true,
+            "PullUp": false,
+            "PullLeft": false,
+            "PullRight": false
+        }
+    ]
+}

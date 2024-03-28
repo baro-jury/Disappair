@@ -1,0 +1,27 @@
+{
+    "Level": 2,
+    "Difficulty": "Normal",
+    "Theme": 1,
+    "Time": [ 90.0, 0.0, 30.0, 60.0 ],
+    "Process": [
+        {
+            "MinID": 1,
+            "MaxID": 86,
+            "TotalTile": 24,
+            "Shuffle": false,
+            "Row": 5,
+            "Column": 5,
+            "Matrix": [
+                [ "2", "3", "4", "6", "7" ],
+                [ "4", "2", "7", "6", "3" ],
+                [ "3", "7", "", "7", "2" ],
+                [ "4", "3", "2", "7", "6" ],
+                [ "2", "4", "6", "2", "7" ]
+            ],
+            "PullDown": false,
+            "PullUp": false,
+            "PullLeft": false,
+            "PullRight": false
+        }
+    ]
+}
