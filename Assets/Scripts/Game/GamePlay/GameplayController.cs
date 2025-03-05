@@ -449,7 +449,7 @@ public class GameplayController : MonoBehaviour
         Time.timeScale = 0;
         GameObject shopPanel = shop.transform.GetChild(order).gameObject;
         shopPanel.SetActive(true);
-        shopPanel.transform.GetChild(0).GetChild(2).GetComponent<Button>().onClick.AddListener(delegate { Time.timeScale = 1; });
+        shopPanel.transform.GetChild(0).GetChild(5).GetComponent<Button>().onClick.AddListener(delegate { Time.timeScale = 1; });
         Button btBuy = shopPanel.transform.GetChild(0).GetChild(5).GetComponent<Button>();
         btBuy.onClick.RemoveAllListeners();
         btBuy.onClick.AddListener(delegate
