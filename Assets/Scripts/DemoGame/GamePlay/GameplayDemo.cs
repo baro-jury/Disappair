@@ -75,10 +75,10 @@ public class GameplayDemo : MonoBehaviour
             TutorialDemo.instance.tutorialPanel.transform.GetChild(1).localPosition = new Vector3
                 (temp.x, btSpHint.transform.parent.parent.parent.localPosition.y + 105 + 185, temp.z);
         }
-        else 
+        else
         {
             if (PlayerPrefsDemo.instance._GetNumOfHint() == 0) btSpHint.transform.GetChild(0).GetComponent<Text>().text = "+";
-            else btSpHint.transform.GetChild(0).GetComponent<Text>().text = PlayerPrefsDemo.instance._GetNumOfHint() + ""; 
+            else btSpHint.transform.GetChild(0).GetComponent<Text>().text = PlayerPrefsDemo.instance._GetNumOfHint() + "";
         }
 
 
@@ -118,7 +118,8 @@ public class GameplayDemo : MonoBehaviour
             TutorialDemo.instance.tutorialPanel.transform.GetChild(4).localPosition = new Vector3
                 (temp.x, btSpShuffle.transform.parent.parent.parent.localPosition.y + 105 + 185, temp.z);
         }
-        else {
+        else
+        {
             if (PlayerPrefsDemo.instance._GetNumOfShuffle() == 0) btSpShuffle.transform.GetChild(0).GetComponent<Text>().text = "+";
             else btSpShuffle.transform.GetChild(0).GetComponent<Text>().text = PlayerPrefsDemo.instance._GetNumOfShuffle() + "";
         }
@@ -348,7 +349,7 @@ public class GameplayDemo : MonoBehaviour
                     if (_HasAvailableConnection(tile, currentTile))
                     {
                         Transform[] temp = new Transform[4];
-                        for(int i = 0; i< points.Length;i++)
+                        for (int i = 0; i < points.Length; i++)
                         {
                             temp[i] = points[i];
                         }
@@ -361,7 +362,7 @@ public class GameplayDemo : MonoBehaviour
                     {
                         if (BoardDemo.levelData.Level == 1)
                         {
-                            Handheld.Vibrate();
+                            // if (Application.platform == RuntimePlatform.Android) Handheld.Vibrate();
                             TutorialDemo.order++;
                             if (TutorialDemo.order == 4)
                             {
