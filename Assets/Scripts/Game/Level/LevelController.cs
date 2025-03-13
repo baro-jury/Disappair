@@ -72,6 +72,13 @@ public class LevelController : MonoBehaviour
         SceneManager.LoadScene("GamePlay");
     }
 
+    public void _PlayMinimalLevel(int lv)
+    {
+        //level = lv;
+        BoardController.levelData = _GetLevelData(lv);
+        SceneManager.LoadScene("GamePlayDemo");
+    }
+
     void _CheckInput(InputField input)
     {
         if (input.text == "" || int.Parse(input.text) <= 0)

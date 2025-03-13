@@ -14,7 +14,7 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private Text stars, coins;
     [SerializeField]
-    private TextMeshProUGUI level;
+    private TextMeshProUGUI txtLv, txtMinimalLv;
     [SerializeField]
     private AudioClip clickButtonClip, switchClip;
 
@@ -35,7 +35,8 @@ public class MenuController : MonoBehaviour
     {
         stars.text = PlayerPrefsController.instance._GetStarsAchieved() + "";
         coins.text = PlayerPrefsController.instance._GetCoinsInPossession() + "";
-        level.text = "LEVEL " + PlayerPrefsController.instance._GetMarkedLevel();
+        txtLv.text = "Play Lv." + PlayerPrefsController.instance._GetMarkedLevel();
+        txtMinimalLv.text = "Minimal Lv." + PlayerPrefsController.instance._GetMarkedLevel();
         settingPanel.transform.GetChild(0).GetChild(3).GetChild(0).GetChild(0).GetChild(0).gameObject.SetActive(PlayerPrefsController.instance.audioSource.mute);
         settingPanel.transform.GetChild(0).GetChild(3).GetChild(0).GetChild(1).GetChild(0).gameObject.SetActive(PlayerPrefsController.instance.musicSource.mute);
     }
@@ -44,6 +45,12 @@ public class MenuController : MonoBehaviour
     {
         PlayerPrefsController.instance.audioSource.PlayOneShot(clickButtonClip);
         LevelController.instance._PlayLevel(PlayerPrefsController.instance._GetMarkedLevel());
+    }
+
+    public void _PlayMinimalGame()
+    {
+        PlayerPrefsController.instance.audioSource.PlayOneShot(clickButtonClip);
+        LevelController.instance._PlayMinimalLevel(PlayerPrefsController.instance._GetMarkedLevel());
     }
 
     public void _ChooseLevel()
