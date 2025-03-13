@@ -85,6 +85,10 @@ public class LevelController : MonoBehaviour
         {
             input.text = "1";
         }
+        else if (int.Parse(input.text) > PlayerPrefsController.instance._GetMarkedLevel())
+        {
+            input.text = PlayerPrefsController.instance._GetMarkedLevel() + "";
+        }
         else if (int.Parse(input.text) > Resources.LoadAll("Levels").Length)
         {
             input.text = Resources.LoadAll("Levels").Length + "";
