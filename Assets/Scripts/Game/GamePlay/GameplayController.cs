@@ -406,7 +406,7 @@ public class GameplayController : MonoBehaviour
                     {
                         if (BoardController.levelData.Level == 1)
                         {
-                            Handheld.Vibrate();
+                            // if (Application.platform == RuntimePlatform.Android) Handheld.Vibrate();
                             TutorialController.order++;
                             if (TutorialController.order == 4)
                             {
